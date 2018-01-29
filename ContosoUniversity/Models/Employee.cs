@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ContosoUniversity.Models
 {
-    public class Student
+    public class Employee
     {
         public int ID { get; set; }
         public string LastName { get; set; }

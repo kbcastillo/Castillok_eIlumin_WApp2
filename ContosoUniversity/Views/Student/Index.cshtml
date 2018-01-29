@@ -1,9 +1,9 @@
-﻿@model PagedList.IPagedList<ContosoUniversity.Models.Student>
+﻿@model PagedList.IPagedList<ContosoUniversity.Models.Employee>
 @using PagedList.Mvc;
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Students";
+    ViewBag.Title = "Employees";
 }
 
 <h2>Students</h2>
@@ -12,7 +12,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@using (Html.BeginForm("Index", "Student", FormMethod.Get))
+@using (Html.BeginForm("Index", "Employees", FormMethod.Get))
 {
     <p>
         Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)

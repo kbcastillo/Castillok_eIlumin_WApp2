@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ContosoUniversity.Models
 {
-    public class Course
+    public class Promotion
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CourseID { get; set; }

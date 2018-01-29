@@ -70,7 +70,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Employee student = db.Students.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -89,7 +89,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LastName, FirstMidName, EnrollmentDate")]Student student)
+        public ActionResult Create([Bind(Include = "LastName, FirstMidName, EnrollmentDate")]Employee student)
         {
             try
             {
@@ -115,7 +115,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Employee student = db.Students.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -128,7 +128,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID, LastName, FirstMidName, EnrollmentDate")]Student student)
+        public ActionResult Edit([Bind(Include = "ID, LastName, FirstMidName, EnrollmentDate")]Employee student)
         {
             try
             {
@@ -159,7 +159,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             {
                 ViewBag.ErrorMessage = "Delete failed. Try again, and if the problem persists see your system administrator.";
             }
-            Student student = db.Students.Find(id);
+            Employee student = db.Students.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -175,7 +175,7 @@ ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
         {
             try
             {
-                Student student = db.Students.Find(id);
+                Employee student = db.Students.Find(id);
 
                 db.Students.Remove(student);
                 db.SaveChanges();
